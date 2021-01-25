@@ -12,6 +12,9 @@
             margin: 1em;
             padding: 1em;
         }
+        .special h3{
+
+        }
     </style>
 </head>
 
@@ -26,14 +29,14 @@
                     Mollitia quibusdam maxime inventore iusto ipsa. Animi cupiditate doloremque laboriosam, quo
                     voluptate amet quae, repellendus velit neque fuga reiciendis!</p>
             </article>
-            <article>
+            <article class="special">
                 <h3>article-2</h3>
                 <p class="author">author-2</p>
                 <p class="description">Quia repudiandae assumenda eaque nesciunt molestias rem libero error minima quo,
                     quidem dolore itaque eum nihil? Iure reiciendis, praesentium excepturi veniam dolorum totam odit
                     ullam suscipit, quod delectus consequuntur aliquid.</p>
             </article>
-            <article>
+            <article class="special">
                 <h3>article-3</h3>
                 <p class="author">author-3</p>
                 <p class="description">At molestias, est illo a animi architecto! Quod suscipit accusamus laborum cumque
@@ -43,7 +46,7 @@
         </section>
     </main>
     <script>
-        let authors = document.getElementsByClassName('author');
+        let authors = document.querySelectorAll('.special h3');
         for (i = 0; i < authors.length; i++) {
             let element=authors[i];
             element.style.backgroundColor='lightblue';
