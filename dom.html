@@ -12,8 +12,6 @@
             margin: 1em;
             padding: 1em;
         }
-
-        .special h3 {}
     </style>
 </head>
 
@@ -21,7 +19,7 @@
     <main>
         <section>
             <h3>Exploring Dom</h3>
-            <article>
+            <article id="first-article">
                 <h3>article-1</h3>
                 <p class="author">author-1</p>
                 <p class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat, dolorum id.
@@ -42,10 +40,19 @@
                     architecto enim earum quos, praesentium corrupti fugit hic esse consequuntur eveniet tempore
                     deleniti explicabo minima. Animi, quaerat temporibus.</p>
             </article>
+            <article>
+                <h3>Grocery List</h3>
+                <ul id="gift-list">
+                    <li>Gift Item-1</li>
+                    <li>Gift Item-2</li>
+                    <li>Gift Item-3</li>
+                    <li>Gift Item-4</li>
+                    <li>Gift Item-5</li>
+                </ul>
+            </article>
         </section>
     </main>
     <script>
-        document.body.style.backgroundColor = 'gray';
         let authors = document.querySelectorAll('.special h3');
         for (i = 0; i < authors.length; i++) {
             let element = authors[i];
@@ -54,6 +61,16 @@
             element.style.fontSize = '2em';
             element.innerHTML = 'Lekhok-' + (i + 1);
         }
+
+        const article = document.getElementById('first-article');
+        const newParagraph = document.createElement('p');
+        newParagraph.innerHTML = 'This is added by JavaScript';
+        article.appendChild(newParagraph);
+        //Add a new element for gift item
+        const ul = document.getElementById('gift-list');
+        const li = document.createElement('li');
+        li.innerHTML = 'New brand';
+        ul.appendChild(li);
     </script>
 </body>
 
