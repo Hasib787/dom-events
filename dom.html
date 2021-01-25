@@ -12,9 +12,8 @@
             margin: 1em;
             padding: 1em;
         }
-        .special h3{
 
-        }
+        .special h3 {}
     </style>
 </head>
 
@@ -46,12 +45,14 @@
         </section>
     </main>
     <script>
+        document.body.style.backgroundColor = 'gray';
         let authors = document.querySelectorAll('.special h3');
         for (i = 0; i < authors.length; i++) {
-            let element=authors[i];
-            element.style.backgroundColor='lightblue';
-            element.style.fontSize='2em';
-            element.innerHTML='Lekhok-'+(i+1);
+            let element = authors[i];
+            element.style.backgroundColor = 'lightblue';
+            element.setAttribute('title', 'All Author is same');
+            element.style.fontSize = '2em';
+            element.innerHTML = 'Lekhok-' + (i + 1);
         }
     </script>
 </body>
