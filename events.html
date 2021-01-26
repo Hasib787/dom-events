@@ -6,12 +6,28 @@
     <title>Event Management</title>
 </head>
 <body>
-    <h1 onclick="handleClick()">Exploring Events</h1>
-    <button onmouseout="handleClick()">Click me</button>
+    <h1>Exploring Events</h1>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores iusto facilis unde repudiandae culpa, provident sequi ducimus quam recusandae? Distinctio eum rem aut ab pariatur mollitia molestias ullam sapiente dolores harum, tenetur, magnam reiciendis blanditiis alias modi. Blanditiis, incidunt voluptatem!</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero, dolorum.</p>
+    <p>Eligendi incidunt veritatis ipsum neque aperiam minus accusantium reprehenderit quibusdam.</p>
+    <p>Possimus harum maxime sed perspiciatis sint in voluptates rerum animi?</p>
+    <p>In tempore et ullam qui libero amet odio nulla harum.</p>
+    <p>Autem possimus provident modi esse reprehenderit ut quasi consectetur? At?</p>
+    <button>click me-1</button>
+    <button id="second">click me-2</button>
+    <button>click me-3</button>
+    <button id="last">night mode</button>
     <script>
+        document.getElementById('last').addEventListener('click',function(){
+            document.body.style.color='white';
+        });
         function handleClick(){
-            console.log('Someone is here');
+            document.body.style.backgroundColor='black';
         }
+        const secondButton=document.getElementById('second');
+
+        secondButton.addEventListener('click', handleClick);
+        // secondButton.onclick=handleClick;
     </script>
 </body>
 </html>
