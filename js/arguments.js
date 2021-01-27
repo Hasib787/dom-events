@@ -2,7 +2,7 @@ function addNumbers(num1){
     let sum=0;
     for (let i = 0; i < arguments.length; i++) {
         const num = arguments[i];
-        sum=sum+num;    
+        sum=sum+num;   
     }
     return sum;
 }
