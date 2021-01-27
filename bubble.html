@@ -9,26 +9,46 @@
     <div class="" id="container">
         <h1>My list</h1>
         <ul id="myList">
-            <li id="first" class="item">lorem1</li>
-            <li class="item">lorem2</li>
-            <li class="item">lorem3</li>
-            <li class="item">lorem4</li>
-            <li class="item">lorem5</li>
-            <li class="item">lorem6</li>
-            <li id="last" class="item">lorem7</li>
+            <li id="first" class="item">Who are you</li>
+            <li class="item">lorem as a good</li>
+            <li class="item">Jony Loves chocklate</li>
+            <li class="item">Brand are fake</li>
+            <li class="item">Never tell a lies</li>
+            <li class="item">Life is nothing but happiness</li>
+            <li id="last" class="item">Think positive</li>
         </ul>
+        <button id="addNew">Add new item</button>
     </div>
 
     <script>
-        document.getElementById('first').addEventListener('click', function(event){
-            console.log('first item clicked');
+        // let items=document.getElementsByClassName('item');
+        // for (let i = 0; i < items.length; i++) {
+        //     const item = items[i];
+        //     item.addEventListener('click', function(event){
+        //         event.target.parentNode.removeChild(event.target);
+        //     }); 
+        // }
+
+        document.getElementById('addNew').addEventListener('click', function(event){
+            let itemParent=document.getElementById('myList');
+            let newItem =document.createElement('li');
+            newItem.innerHTML='Brand new item';
+            itemParent.appendChild(newItem);
+        })
+        
+        document.getElementById('myList').addEventListener('click', function(event){
+            event.target.parentNode.removeChild(event.target);
         });
-        document.getElementById('last').addEventListener('click', function(event){
-            console.log('last item clicked');
-        });
-        document.getElementById('container').addEventListener('click', function(event){
-            console.log('Container clicked');
-        });
+
+        // document.getElementById('first').addEventListener('click', function(event){
+        //     console.log('first item clicked');
+        //     event.stopPropagation();
+        // });
+       
+        // document.getElementById('container').addEventListener('click', function(event){
+        //     console.log('Container clicked');
+        // });
+        
     </script>
 </body>
 </html>
