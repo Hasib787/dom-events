@@ -11,8 +11,13 @@ console.log(result);
 
 //another example
 function getFullName(firstName, lastName) {
-    let fullName = firstName + lastName;
+    console.log(arguments);
+    let fullName = '';
+    for (let i = 0; i < arguments.length; i++) {
+        const namePart = arguments[i];
+        fullName = fullName + ' ' + namePart;
+    }
     return fullName;
 }
-let myName=getFullName('Hasibul',' Hasan');
+let myName = getFullName('Hasibul', ' Hasan', 'ValoManush', 'Hujur');
 console.log(myName);
